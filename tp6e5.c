@@ -88,7 +88,22 @@ void LeeCad (T_Cad cadena, int tam){
 		c=getchar();
 }
 
-	
+void CargaLista (List vec, int*tam){
+	int op, i;
+	printf("si desea cargar un contacto digite 1. caso contrario digite 0;")
+	scanf("%d", &op);
+	i=0;
+	while(op==1){
+		i++;
+		vec[i]= Carga_Contacto();
+		if(i>0{
+			/*ordena*/
+		})
+		printf("si desea cargar un contacto digite 1. caso contrario digite 0;")
+		scanf("%d", &op);
+		
+	}
+}	
 	
 	
 	
