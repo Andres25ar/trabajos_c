@@ -59,8 +59,9 @@ int ContarPalabras (Cadena cad){
 }
 
 void CargarArrCadenaOrdeando(ArrCadena lista, int* tam){
-    int i;
+    int i, j;
     int cantidad;
+    Cadena aux;
     printf("\nIngrese cantidad a cargar: \n");
     scanf("%d", &cantidad);
     fflush(stdin);
@@ -68,6 +69,14 @@ void CargarArrCadenaOrdeando(ArrCadena lista, int* tam){
     for (i = 2; i <= cantidad; i++){
         fflush(stdin);
         LeeCadena(lista[i], TAM_CAD);
+        strcpy(lista[0], lista[i]);
+        j = i;
+        while(strcmp(lista[j], lista[j-1])==-1){
+          strcpy(aux, lista[j]);
+          strcpy(lista[j], lista[j-1]);
+          strcpy(lista[j-1], aux);
+          j--;
+        }
     }
     *tam = cantidad;
 }
